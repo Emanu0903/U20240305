@@ -1,0 +1,14 @@
+
+let readline = require(`readline`)
+
+let rl = readline.createInterface(
+    process.stdin,
+    process.stdout,
+)
+ 
+rl.question(`escriba la palabra ala cual le quiere contar vocales`, (frase)=>{
+   const frase1 = frase.replace(/[^aeiouAEIOUÁÉÍÓÚáéíóú]/g, '').length;
+   
+  console.log(`su numero de vocales es ${frase1}`)
+  process.exit()
+})

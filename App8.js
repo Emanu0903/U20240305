@@ -1,0 +1,21 @@
+let readline = require(`readline`)
+
+let rl = readline.createInterface(
+    process.stdin,
+    process.stdout,
+)
+
+rl.question(`Escribe la palabra que quieres verificar si es palindromo:`, (palabra)=>{
+    const palabra1 = palabra.split("");
+    const palabra2 = palabra1.reverse();
+    const palabraPalindromo = palabra2.join("")
+
+    if(palabra == palabraPalindromo){
+        console.log("su palabra si es palindroma")
+
+    }else{
+        console.log(`su palabra no es palindroma`)
+    }
+
+    process.exit()
+})
